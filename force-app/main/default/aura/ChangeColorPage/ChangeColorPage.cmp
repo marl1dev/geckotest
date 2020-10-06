@@ -12,7 +12,7 @@
     ]"
   />
   <aura:attribute name="miTexto" type="String" />
-  <div aura:id="theContainer" class="slds-box slds-box_small" style="background-color:">    
+  <div aura:id="theContainer" class="slds-box slds-box_small" >    
     <lightning:combobox
       name="listColors"
       label="Seleccione un color de fondo"
