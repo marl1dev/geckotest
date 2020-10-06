@@ -9,8 +9,14 @@
             helper.addstyleBlue(component, event);                      
         }
     },
-    colorChanger : function(component,event,helper){
-        var pickedColor = component.find("colorPicker").get("v.value");
-        console.log(pickedColor);
+    handleChangeText: function(component, event,helper){
+        var selectedOptionValue = event.getParam("value");
+        if(selectedOptionValue == "cafe"){                    
+            helper.addTextBrown(component, event);
+        } else if(selectedOptionValue == "negro"){            
+            helper.addTextBlack(component, event);
+        } else if(selectedOptionValue == "gris"){            
+            helper.addTextGray(component, event);
+        }
     }
 })

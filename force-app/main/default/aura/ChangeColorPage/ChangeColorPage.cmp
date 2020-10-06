@@ -11,25 +11,36 @@
         {'label': 'Azul', 'value': 'azul'},
     ]"
   />
+  <aura:attribute
+    name="TextOptions"
+    type="List"
+    default="[
+        {'label': 'Cafe', 'value': 'cafe'},
+        {'label': 'Negro', 'value': 'negro'},
+        {'label': 'Gris', 'value': 'gris'},
+    ]"
+  />
   <aura:attribute name="miTexto" type="String" />
-  <div aura:id="theContainer" class="slds-box slds-box_small" >    
+  <div aura:id="theContainer" class="slds-box slds-box_small" >            
     <lightning:combobox
-      name="listColors"
-      label="Seleccione un color de fondo"
+      name="listBackGroundColors"      
       options="{!v.BackgroundOptions}"
       onchange="{!c.handleChange}"
-    />
+      placeholder = "Seleccione un color para el fondo"      
+    />    
     <lightning:combobox
-      name="listColors"
-      label="Selecccione un color para su texto"
-      options="{!v.options}"
+      name="listTextColors"      
+      options="{!v.TextOptions}"
+      onchange="{!c.handleChangeText}"
+      placeholder = "Seleccione un color para el texto"
     />
-
     <lightning:input
       name="inputText"
       value="{!v.miTexto}"
-      label="Ingrese su texto"
+      placeholder = "Ingrese su texto a mostrar aqui"
     />
+    <br/>
+    <br/>
     <p>Hola, tú texto es: {! v.miTexto }</p>
   </div>
 </aura:component>
