@@ -1,19 +1,35 @@
-<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
-    <aura:attribute name="options" type="List" default="[
+<aura:component
+  implements="forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <aura:attribute
+    name="BackgroundOptions"
+    type="List"
+    default="[
         {'label': 'Rojo', 'value': 'rojo'},
         {'label': 'Amarillo', 'value': 'amarillo'},
         {'label': 'Azul', 'value': 'azul'},
-    ]"/>
-    <aura:attribute name="miTexto" type="String"/>
-    <lightning:combobox name="listColors" label="Seleccione un color de fondo" options="{!v.options}" onchange="{!c.handleChange}"/>
-    <lightning:combobox name="listColors" label="Selecccione un color para su texto" options="{!v.options}"/>
-    <div>        
-        <lightning:input name="input8" value="{!v.miTexto}" label="Ingrese su texto"/>
-        <p>
-            Hola, tú texto es: {! v.miTexto }
-        </p>
-    </div>
+    ]"
+  />
+  <aura:attribute name="miTexto" type="String" />
+  <div aura:id="theContainer" class="slds-box slds-box_small" style="background-color:">    
+    <lightning:combobox
+      name="listColors"
+      label="Seleccione un color de fondo"
+      options="{!v.BackgroundOptions}"
+      onchange="{!c.handleChange}"
+    />
+    <lightning:combobox
+      name="listColors"
+      label="Selecccione un color para su texto"
+      options="{!v.options}"
+    />
 
-    
-    
+    <lightning:input
+      name="inputText"
+      value="{!v.miTexto}"
+      label="Ingrese su texto"
+    />
+    <p>Hola, tú texto es: {! v.miTexto }</p>
+  </div>
 </aura:component>

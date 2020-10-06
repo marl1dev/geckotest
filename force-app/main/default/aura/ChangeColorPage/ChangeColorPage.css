@@ -1,2 +1,10 @@
-.THIS {
+.THIS.externalRed {    
+    background-color:#C24F4F;
 }
+.THIS.externalYellow {    
+    background-color:#FFE23D;
+}
+.THIS.externalBlue {    
+    background-color:#3D5EFF;
+}
+
