@@ -1,3 +1,15 @@
-<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+<aura:component controller="CreateRecords" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="nombre" type="String"/>
+    <aura:attribute name="apellido" type="String"/>
+    <aura:attribute name="nombrempresa" type="String"/>
+    <aura:attribute name="correoelectronico" type="String"/>
+    <aura:attribute name="descripcioncaso" type="String"/>
+
+    <lightning:input name="inputNombre" value="{!v.nombre}" label="Nombre"/>
+    <lightning:input name="inputApellido" value="{!v.apellido}" label="Apellido"/>
+    <lightning:input name="inputNombreEmpresa" value="{!v.nombrempresa}" label="Nombre de la empresa"/>
+    <lightning:input name="inputCorreoElectronico" value="{!v.correoelectronico}" label="Correo Eletronico"/>
+    <lightning:textarea name="inputDescripcionCaso" value="{!v.descripcioncaso}" label="Descripcion del caso"/>    
+    <lightning:button variant="brand" label="Enviar" onclick="{!c.doSave}"/>
 
 </aura:component>	
