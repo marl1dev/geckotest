@@ -29,6 +29,7 @@ public without sharing class CreateRecords {
         case1.Status = 'New';
         case1.Origin = 'Web';
         case1.Priority = 'Medium';
+        case1.Correo_Electronico_Cliente__c = correo;
         case1.AccountId = acc.Id;
         try{
             insert case1;
